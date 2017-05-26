@@ -21,4 +21,12 @@ class KataTest extends \PHPUnit_Framework_TestCase
         $result = $kata->execute(1);
         $this->assertEquals(1, $result);
     }
+
+    /** @test */
+    public function returnParam()
+    {
+        $kata = new Kata();
+        $result = $kata->execute(2);
+        $this->assertEquals(2, $result);
+    }
 }
