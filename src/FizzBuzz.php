@@ -12,12 +12,13 @@ class FizzBuzz
     public function getReplacement($param)
     {
         $returnValue = $param;
-
+        if(!is_integer($param)){
+            throw new \Exception("No es un numero");
+        }
 
         if ($this->checkDivisibleByThree($param)) {
             $returnValue = 'Fizz';
         }
-
         if ($this->checkDivisibleByFive($param)) {
             $returnValue = 'Buzz';
         }
