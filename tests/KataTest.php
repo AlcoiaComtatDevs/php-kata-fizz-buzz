@@ -36,4 +36,11 @@ class KataTest extends \PHPUnit_Framework_TestCase
         $result = $kata->execute(3);
         $this->assertEquals("Fizz", $result);
     }
+
+    /** @test */
+    public function sendFiveReturnBuzz(){
+        $kata = new Kata();
+        $result = $kata->execute(5);
+        $this->assertEquals("Buzz", $result);
+    }
 }
