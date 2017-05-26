@@ -12,9 +12,11 @@ class FizzBuzz
             $returnValue = 'Fizz';
         }
         if ($param % 5 === 0) {
-            $returnValue = 'Buzz';
+        $returnValue = 'Buzz';
+    }
+        if ($param % 5 === 0 &&$param % 3 === 0 ) {
+            $returnValue = 'FizzBuzz';
         }
-
         return $returnValue;
     }
 }
