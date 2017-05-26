@@ -49,4 +49,13 @@ class KataTest extends \PHPUnit_Framework_TestCase
         $result = $kata->getReplacement(15);
         $this->assertEquals("FizzBuzz", $result);
     }
+
+    /** @test
+        *@expectedException \Exception
+    */
+    public function sendStringReturnException(){
+        $kata = new FizzBuzz();
+        $kata->getReplacement("hola");
+
+    }
 }
