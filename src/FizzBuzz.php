@@ -13,7 +13,7 @@ class FizzBuzz
     {
         $returnValue = $param;
         if(!is_integer($param)){
-            throw new \Exception("No es un numero");
+            throw new IsNoNumberException();
         }
 
         if ($this->checkDivisibleByThree($param)) {
