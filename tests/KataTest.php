@@ -3,7 +3,7 @@
 
 namespace Kata\Test;
 
-use Kata\Kata;
+use Kata\FizzBuzz;
 
 class KataTest extends \PHPUnit_Framework_TestCase
 {
@@ -17,30 +17,30 @@ class KataTest extends \PHPUnit_Framework_TestCase
     /** @test */
     public function returnOne()
     {
-        $kata = new Kata();
-        $result = $kata->execute(1);
+        $kata = new FizzBuzz();
+        $result = $kata->getReplacement(1);
         $this->assertEquals(1, $result);
     }
 
     /** @test */
     public function returnParam()
     {
-        $kata = new Kata();
-        $result = $kata->execute(2);
+        $kata = new FizzBuzz();
+        $result = $kata->getReplacement(2);
         $this->assertEquals(2, $result);
     }
 
     /** @test */
     public function sendThreeReturnFizz(){
-        $kata = new Kata();
-        $result = $kata->execute(3);
+        $kata = new FizzBuzz();
+        $result = $kata->getReplacement(3);
         $this->assertEquals("Fizz", $result);
     }
 
     /** @test */
     public function sendFiveReturnBuzz(){
-        $kata = new Kata();
-        $result = $kata->execute(5);
+        $kata = new FizzBuzz();
+        $result = $kata->getReplacement(5);
         $this->assertEquals("Buzz", $result);
     }
 }
